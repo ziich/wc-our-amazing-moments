@@ -1,13 +1,12 @@
 <!--pages/post/post.wxml-->
 
-<view class='background'>
-<view class="section__title"> Post</view>
-<form bindsubmit="formSubmit" bindreset="formReset">
-<view class="section__title">Comment</view>
-  <view class="section">
-    <input name="text" placeholder="Only Awesome Comments" />
-  </view>
-  <button class="btn-area-pic" formType="submit">Choose/Take a Picture </button>
-  <button class="btn-area-post" formType="submit">Post </button> 
-</form>
+<view class="container">
+  <view class="post-title">New Amazing Moment</view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="post-field">
+      <textarea placeholder="Say something amazing!" auto-focus />
+    </view>
+    <button class="btn-post" formType="submit">Add Picture</button>
+    <button class="btn-post" formType="submit">Submit Post</button> 
+    </form>
 </view>

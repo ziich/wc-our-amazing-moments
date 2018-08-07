@@ -1,24 +1,24 @@
 <!--index.wxml-->
   <view class="container">
     <view class="card">
-      <p>text-content goes in this card</p>
+      <p class="post-txt">text-content goes in this card</p>
         <view class="card-footer">
         <view class="footer-left">2018-08-08</view>
-        <view class="footer-right">comment like</view></view>
+        <view class="footer-right">comment [5] like</view></view>
     </view>
 
     <view class="card">
       <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now?</p>
         <view class="card-footer">
         <view class="footer-left">2018-08-08</view>
-        <view class="footer-right">comment like</view></view>
+        <view class="footer-right">comment(0) like</view></view>
     </view>
 
    <view class="card">
-      <p>text-content goes in this card</p>
+      <p class="post-txt">text-content goes in this card</p>
         <view class="card-footer">
         <view class="footer-left">2018-08-08</view>
-        <view class="footer-right">comment like</view></view>
+        <view class="footer-right">comment (10) like</view></view>
     </view>
 
     <view class="userinfo">
