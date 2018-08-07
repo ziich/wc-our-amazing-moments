@@ -2,25 +2,24 @@
 
 /**global colors**/
 view {
-  --card-bg: #F2E9E1; 
+  --offwhite: #F2E9E1; 
   --txt: black;
-  --back-bg: #333333;
-  --card-footer-bg: #CBE86B;
+  --darkgrey: #464646;
+  --brightgreen: #CBE86B;
   --footer-txt: black;
 }
 
 .post-txt{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13pt;
+  font-size: 12pt;
 }
 .card {
   display: flex;
-  background-color: var(--card-bg);
+  background-color: var(--offwhite);
   min-height: 100px;
   width: 90vw;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.7);
   position: relative;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 5px;
   padding-top: 5px;
   padding: 5px 5px 0px 5px;
@@ -29,7 +28,7 @@ view {
 }
 
 .card-footer{
-  background-color: var(--card-footer-bg);
+  background-color: var(--brightgreen);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -40,16 +39,17 @@ view {
 .footer-left{
 float: left;
 font-size: 12pt;
-color: var(--footer-txt);
+color: black;
 }
 
 .footer-right{
   float: right;
   margin: 0px 10px 0px 0px;
   font-size: 12pt;
-  color: var(--footer-txt);
+  color: black;
   font-weight: bold;
 }
+
 .container {
   height: 100vh;
   display: flex;
@@ -58,5 +58,5 @@ color: var(--footer-txt);
   justify-content: center;
   padding: 200rpx 0;
   box-sizing: border-box;
-  background-color: var(--back-bg)
+  background-color: var(--darkgrey)
 } 

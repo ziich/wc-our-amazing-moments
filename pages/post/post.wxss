@@ -3,10 +3,10 @@
   background-color:#333333; 
 }
 
-.section__title{
+.post-title {
   margin-top: 10px;
   text-align: center; 
-  color: white;
+  color: var(--brightgreen);
 }
 
 .section{
@@ -15,29 +15,22 @@
   margin: 10px 10px 10px 10px;
 }
 
-
-.btn-area-pic{
-  margin-top: 345px;
-  color: #999999;
-  background-color: #CBE86B;
-  border: 1px solid #F2E9E1;
-  padding: 10px 15px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-
+.post-field{
+  background-color: var(--offwhite);
+  color: black;
+  font-size: 15px;
+  padding: 5px;
+  margin: 20px;
+  border: 1px solid var(--brightgreen);
 }
 
-.btn-area-post{
+.btn-post{
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #999999;
-  background-color: #CBE86B;
-  border: 1px solid #F2E9E1;
+  color: var(--brightgreen);
+  background-color: var(--card-footer-bg);
+  border: 1px solid var(--brightgreen);
   padding: 10px 15px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
-
-
 }

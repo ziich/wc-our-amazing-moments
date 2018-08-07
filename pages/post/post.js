@@ -1,3 +1,4 @@
+
 // pages/post/post.js
 Page({
   default: function(e) {
