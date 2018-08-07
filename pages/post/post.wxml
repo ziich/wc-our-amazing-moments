@@ -7,7 +7,7 @@
   <view class="section">
     <input name="text" placeholder="Only Awesome Comments" />
   </view>
-  <button class="btn-area-pic" formType="submit">Choose/Take a Picture </button>
+  <button class="btn-area-pic" bindtap="default">Choose/Take a Picture </button>
   <button class="btn-area-post" formType="submit">Post </button> 
 </form>
 </view>
