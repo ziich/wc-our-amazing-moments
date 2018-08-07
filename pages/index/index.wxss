@@ -1,4 +1,7 @@
 /**index.wxss**/
+@import "../../app.wxss";
+@import "../assets/card.wxss";
+
 .userinfo {
   display: flex;
   flex-direction: column;
