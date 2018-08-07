@@ -2,8 +2,25 @@
   <view class="container">
     <view class="card">
       <p>text-content goes in this card</p>
-        <view class="card-footer">footer</view>
+        <view class="card-footer">
+        <view class="footer-left">2018-08-08</view>
+        <view class="footer-right">comment like</view></view>
     </view>
+
+    <view class="card">
+      <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now?</p>
+        <view class="card-footer">
+        <view class="footer-left">2018-08-08</view>
+        <view class="footer-right">comment like</view></view>
+    </view>
+
+   <view class="card">
+      <p>text-content goes in this card</p>
+        <view class="card-footer">
+        <view class="footer-left">2018-08-08</view>
+        <view class="footer-right">comment like</view></view>
+    </view>
+
     <view class="userinfo">
      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
       <block wx:else>
