@@ -3,7 +3,7 @@
 const myRequest = require('../../lib/api/request');
 
 Page({
-  default: function(e) {
+  post: function(e) {
     wx.chooseImage({
       count: 1, // Default 9
       sizeType: ['original', 'compressed'], // Can specify whether it is the                original or compressed image, both have defaults
