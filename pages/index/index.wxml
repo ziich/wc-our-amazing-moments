@@ -1,6 +1,4 @@
 <!--index.wxml-->
-
-
   <view class="container">
     <view class="card">
       <p>text-content goes in this card</p>
@@ -16,7 +14,4 @@
     <view class="usermotto">
      <text class="user-motto">{{motto}}</text>
     </view>
-
-
-  
-</view>
+  </view>
