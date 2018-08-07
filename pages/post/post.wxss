@@ -1,11 +1,9 @@
 /* pages/post/post.wxss */
-.background{
-  background-color:#333333; 
-}
 
 .post-title {
   margin-top: 10px;
   text-align: center; 
+  font-weight: lighter;
   color: var(--brightgreen);
 }
 

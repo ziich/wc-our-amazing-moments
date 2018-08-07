@@ -1,0 +1,15 @@
+<!--pages/show/show.wxml-->
+<view class="container">
+    <view class="card">
+      <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now?</p>
+        <view class="card-footer">
+        <view class="footer-left">2018-08-08</view>
+        <view class="footer-right">comment(0) like</view></view>
+    </view>
+  <form bindsubmit="bindFormSubmit">
+    <view class="section">
+      <textarea class="post-field" bindblur="bindTextAreaBlur" auto-height placeholder="leave a comment (140 chars)" />
+    </view>
+    <button class="btn-comment" form-type="submit">Submit Comment</button>
+  </form>
+</view>

@@ -1,0 +1,16 @@
+/* pages/show/show.wxss */
+
+.post-field{
+  background-color: var(--offwhite);
+  color: black;
+  font-size: 15px;
+  padding: 5px;
+  margin: 20px;
+  border: 1px solid var(--brightgreen);
+  border-radius: 5px;
+  min-height: 40px;
+  width: 90vw;
+  
+    
+}
+

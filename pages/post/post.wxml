@@ -1,6 +1,6 @@
 <!--pages/post/post.wxml-->
 <view class="container">
-  <view class="post-title">New Amazing Moment</view>
+  <view class="post-title">a new amazing moment</view>
     <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="post-field">
       <textarea placeholder="Say something amazing!" auto-focus />
