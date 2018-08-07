@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.2",
-	"appid": "wx7b85d2d1429da2c6",
+	"appid": "wxbf59a62bff818da0",
 	"projectname": "wc-our-amazing-moments",
 	"isGameTourist": false,
 	"condition": {
@@ -21,6 +21,10 @@
 			"list": []
 		},
 		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
 			"current": -1,
 			"list": []
 		},
