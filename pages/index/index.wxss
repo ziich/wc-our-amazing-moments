@@ -1,6 +1,6 @@
 /**index.wxss**/
 @import "../../app.wxss";
-@import "../assets/card.wxss";
+/* @import "../assets/card.wxss"; */
 
 .userinfo {
   display: flex;
