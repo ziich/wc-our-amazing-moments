@@ -33,11 +33,11 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "landing",
+					"id": 0,
+					"name": "index",
 					"pathName": "pages/index/index",
 					"query": ""
 				},
@@ -50,7 +50,8 @@
 				{
 					"id": -1,
 					"name": "show",
-					"pathName": "pages/show/show"
+					"pathName": "pages/show/show",
+					"query": ""
 				}
 			]
 		}
