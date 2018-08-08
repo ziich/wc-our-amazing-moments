@@ -20,4 +20,11 @@ post's user name and avatar
     <button class="btn-comment" form-type="submit">Submit Comment</button>
   </form>
   <text class="title">(#)comments</text>
+  <view class="container">
+    <view class="comment-card">
+    <view class="comment-avatar"></view>
+      <view class="comment-head">username - 2018-08-09 12:00am</view>
+      <view class="comment-body">a sweet comment for a sweet post, bitch! </view>
+    </view>
+  </view>
 </view>
