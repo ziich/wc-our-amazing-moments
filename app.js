@@ -1,5 +1,5 @@
-// App({
-//   onLaunch: function(){
+App({
+  onLaunch: function(){
 //     const host  = 'http://localhost:3000/'
 //     console.log('processing to login')
 //     wx.login({
@@ -19,9 +19,13 @@
 //         })
 //       }
 //     })
-//   },
+  },
   
-//   globalData: {
-
-//   }
-// })
+globalData: {
+  items: [
+    { name: "Salmon", content: "Please, give me happy lemon" },
+    { name: "Allen", content: "Nice bootcamp with lewagon" },
+    { name: "Mo", content: "so sleepy today" }
+  ]
+}
+})

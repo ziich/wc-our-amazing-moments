@@ -20,6 +20,7 @@
   padding: 5px;
   margin: 20px;
   border: 1px solid var(--brightgreen);
+  border-radius: 5px;
 }
 
 .btn-post{
@@ -28,7 +29,7 @@
   color: var(--brightgreen);
   background-color: var(--card-footer-bg);
   border: 1px solid var(--brightgreen);
-  padding: 10px 15px;
+  padding: 5px;
   border-radius: 50px;
   font-weight: lighter;
 }
