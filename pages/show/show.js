@@ -12,7 +12,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log(options.id)
+    let id = options.id
+    // change the url
+    wx.request({
+      url: 'http://localhost:3000/post/' + id,
+    })
   },
 
   /**
