@@ -70,6 +70,5 @@ color: black;
   padding: 200rpx 0;
   box-sizing: border-box;
   background-color: var(--darkgrey);
-  border: 1px solid white;
   justify-content: flex-start;
 } 
