@@ -1,6 +1,6 @@
 /* pages/show/show.wxss */
 
-.post-field{
+.post-field {
   background-color: var(--offwhite);
   color: black;
   font-size: 15px;
@@ -10,7 +10,43 @@
   border-radius: 5px;
   min-height: 40px;
   width: 90vw;
-  
-    
 }
 
+.show-card{
+  display: flex;
+  background-color: var(--offwhite);
+  min-height: 200px;
+  width: 90vw;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px 5px 0px 5px;
+  overflow: auto;
+}
+
+.show-header {
+  background-color: var(--brightgreen);
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.show-left {
+float: left;
+font-size: 12pt;
+margin-left: 10px;
+color: black;
+}
+
+.show-right {
+  float: right;
+  margin-right: 10px;
+  font-size: 12pt;
+  color: black;
+  font-weight: bold;
+}
+
+.container{
+  height: 100vh;
+}

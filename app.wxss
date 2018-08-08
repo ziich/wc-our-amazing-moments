@@ -14,6 +14,7 @@ view {
 }
 .card {
   display: flex;
+  flex-direction: column-reverse;
   background-color: var(--offwhite);
   min-height: 100px;
   width: 90vw;
@@ -21,9 +22,19 @@ view {
   position: relative;
   border-radius: 5px;
   margin: 5px;
-  padding-top: 5px;
   padding: 5px 5px 0px 5px;
   overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card::before {
+  content:'';
+  width:100%;
+  height:100%;    
+  position:absolute;
+  left:0;
+  top:0;
+  background:linear-gradient(transparent 45px,white);
 }
 
 .card-footer{
@@ -58,17 +69,22 @@ color: black;
   padding: 0px;
   border-radius: 50px;
   font-weight: lighter;
-  margin: 15px
+  margin: 15px;
 }
 
 .container {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 200rpx 0;
-  box-sizing: border-box;
   background-color: var(--darkgrey);
   justify-content: flex-start;
+  vertical-align: top;
 } 
+
+.title {
+  font-weight: lighter;
+  color: var(--brightgreen);
+  font-size: 16pt;
+}
+
