@@ -15,6 +15,14 @@ Page({
   data: {
     items: []
   },
+  select: function(e) {
+    console.log(e)
+    let _id = e.currentTarget.dataset.data.id
+
+    wx.navigateTo({
+      url: '/pages/show/show?id=_id',
+    })
+  },
   onLoad: function () {
     let page = this
     // console.log(app)
