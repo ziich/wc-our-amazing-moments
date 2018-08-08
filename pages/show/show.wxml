@@ -1,15 +1,18 @@
 <!--pages/show/show.wxml-->
 <view class="container">
-    <view class="card">
+post's user name and avatar
+<view class="show-header">
+        <view class="show-left">2018-08-08</view>
+        <view class="show-right">edit delete</view></view>
+    <view class="show-card">
       <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now?</p>
-        <view class="card-footer">
-        <view class="footer-left">2018-08-08</view>
-        <view class="footer-right">comment(0) like</view></view>
     </view>
+like
   <form bindsubmit="bindFormSubmit">
     <view class="section">
       <textarea class="post-field" bindblur="bindTextAreaBlur" auto-height placeholder="leave a comment (140 chars)" />
     </view>
     <button class="btn-comment" form-type="submit">Submit Comment</button>
   </form>
+  <text class="title">(#)comments</text>
 </view>

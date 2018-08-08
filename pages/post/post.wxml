@@ -1,16 +1,16 @@
 <!--pages/post/post.wxml-->
-<view class="container">
-  <view class="post-title">a new amazing moment</view>
-    <form bindsubmit="formSubmit" bindreset="formReset">
-    <view class="post-field">
-      <textarea placeholder="Say something amazing!" auto-focus />
+  <view class="container">
+    <view class="title">a new amazing moment</view>
+      <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="post-field">
+        <textarea placeholder="Say something amazing!" auto-focus />
+      </view>
+      <button class="btn-post" bindtap='post'>Add Picture</button>
+      <button class="btn-post" formType="submit">Submit Post</button> 
+      </form>
+
+    <view>
+            <!-- <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{../../lib/assets/home.png}}"></image> -->
     </view>
-    <button class="btn-post" bindtap='post'>Add Picture</button>
-    <button class="btn-post" formType="submit">Submit Post</button> 
-    </form>
-</view>
-
-
- <view>
-        <!-- <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{../../lib/assets/home.png}}"></image> -->
-</view>
+    
+  </view>
