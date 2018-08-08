@@ -2,16 +2,17 @@
   <view class="container">
   <!-- ADD DIFFERENT ATTRIBUTES ONCE OUR MODELS ARE DEFINED -->
     <block wx:for="{{items}}"> 
-      <view class="card">
+      <view class="card" bindtap="select" data-id="item.id">
         <p class="post-txt">{{item.content}}</p>
           <view class="card-footer">
           <view class="footer-left">{{item.date}}</view>
-          <view class="footer-right">comments:{{item.comment.length}} likes:{{item.like}}</view></view>
+          <view class="footer-right">comments:{{item.comment.length}} likes:{{item.like}}</view>
+          </view>
       </view>
     </block>
 
     <!-- DELETE CARDS BELOW ONCE OUR SERVER IS RUNNING -->
-    <view class="card">
+    <view class="card" >
       <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now?</p>
         <view class="card-footer">
         <view class="footer-left">2018-08-08</view>
