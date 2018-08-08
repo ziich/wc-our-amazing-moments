@@ -15,16 +15,16 @@ Page({
     })
   },
   data: {},
-  submit: function (e) {
+  formSubmit: function (e) {
     let page = this
     wx.showToast({ title: 'Sending...', icon: 'loading', duration: 1000 })
     // Post new  to API
     myRequest.post({
-      path: 'index',
+      path: 'posts',
       data: {
         post: {
-          content: e.detail.value.text,
-        },
+          content: e.detail.value.content
+        }, 
       },  
     success(res) {
         console.log(res)
