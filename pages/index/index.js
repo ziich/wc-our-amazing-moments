@@ -23,6 +23,15 @@ Page({
       url: '/pages/show/show?id=_id',
     })
   },
+
+// delete this function after posts from DB load properly
+  test: function (e) {
+      wx.navigateTo({
+      url: '/pages/show/show',
+    })
+  },
+// ---
+
   onLoad: function () {
     let page = this
     this.setData({ image_url: options.leanCloudImage })
@@ -37,6 +46,7 @@ Page({
       }
     })
   },
+
   // should only be available for the main user
   deletePost: function (e) {
     let page = this

@@ -9,7 +9,7 @@
             <view class="footer-left">{{item.date}}</view>
             <view class="footer-right">comments:{{item.comment.length}} likes:{{item.like}}</view>                       </view>
       </view>
-    </block>
+    </block>  
 
     <!-- DELETE CARDS BELOW ONCE OUR SERVER IS RUNNING -->
 
@@ -67,5 +67,6 @@
      <text class="user-motto">{{motto}}</text>
     </view>
 
+<view bindtap='test'>go to show</view>
 
   </view>
