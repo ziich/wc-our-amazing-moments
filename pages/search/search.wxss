@@ -40,4 +40,5 @@
 text {
   color: var(--brightgreen);
   font-weight: lighter;
+
 }
