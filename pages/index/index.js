@@ -23,6 +23,7 @@ Page({
       url: '/pages/show/show?id=_id',
     })
   },
+
   onShow: function () {
     let page = this
     myRequest.get({
@@ -38,7 +39,6 @@ Page({
       url: '/pages/show/show',
     })
   },
-// ---
 
   onLoad: function (options) {
     let page = this
