@@ -1,14 +1,13 @@
 <!--index.wxml-->
   <view class="container">
-  <view class="title">your amazing moments</view>
+  <view  class="title">your amazing moments </view>
   <!-- ADD DIFFERENT ATTRIBUTES ONCE OUR MODELS ARE DEFINED -->
     <block wx:for="{{items}}"> 
-      <view class="card" bindtap="select" data-id="item.id">
-        <p class="post-txt">{{item.content}}</p>
+      <view style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.3) 50%),url({{image_url}});" class="card" bindtap="select" data-id="item.id">
+        <p class="post-txt" >{{item.content}}</p>
           <view class="card-footer">
-          <view class="footer-left">{{item.date}}</view>
-          <view class="footer-right">comments:{{item.comment.length}} likes:{{item.like}}</view>
-          </view>
+            <view class="footer-left">{{item.date}}</view>
+            <view class="footer-right">comments:{{item.comment.length}} likes:{{item.like}}</view>                       </view>
       </view>
     </block>
 
@@ -19,10 +18,11 @@
 
         <view class="card-footer">
         <view class="footer-left">2018-08-08</view>
-        <view class="footer-right">comment(0) like</view></view>
+        <view class="footer-right">comment(0) like</view>
+        </view>
     </view>
 
-   <view class="card">
+   <view class="card"> 
       <p class="post-txt">text-content goes in this card</p>
         <view class="card-footer">
         <view class="footer-left">2018-08-08</view>
