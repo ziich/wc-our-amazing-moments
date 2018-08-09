@@ -51,6 +51,10 @@ color: black;
   height: 100vh;
 }
 
+.like-txt{
+  color: var(--brightgreen);
+  font-weight: lighter;
+}
 .heart{
   height: 17px;
   width: 17px;
@@ -65,7 +69,6 @@ color: black;
   margin: 5px;
   padding: 5px 5px 0px 5px;
   font-size: 10pt;
-
 }
 
 .comment-avatar {
