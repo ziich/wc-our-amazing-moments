@@ -50,3 +50,25 @@ color: black;
 .container{
   height: 100vh;
 }
+
+.heart{
+  height: 17px;
+  width: 17px;
+}
+
+.heart-fill {
+  image: url("/lib/assets/heartfill.png");
+}
+
+.heart-nofill {
+  image: "/lib/assets/heart.png";
+}
+
+.like-txt{
+  color: var(--brightgreen);
+  font-weight: lighter;
+  font-size: 12pt;
+}
+.like {
+  align-content:;
+}
