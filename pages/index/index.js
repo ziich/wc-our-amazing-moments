@@ -14,7 +14,6 @@ Page({
 
 
   data: {
-    items: []
   },
   select: function(e) {
     console.log(e)
@@ -24,7 +23,15 @@ Page({
       url: '/pages/show/show?id=_id',
     })
   },
-
+  onShow: function () {
+    let page = this
+    myRequest.get({
+      path: 'posts',
+      success(res) {
+        page.setData({ posts: res.data.posts })
+      }
+    })
+  },
 // delete this function after posts from DB load properly
   test: function (e) {
       wx.navigateTo({

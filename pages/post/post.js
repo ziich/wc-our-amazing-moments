@@ -51,6 +51,7 @@ Page({
     myRequest.post({
       path: 'posts',
       data: {
+        
           content: e.detail.value.content,
           user_id : 3
       },  

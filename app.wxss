@@ -10,11 +10,12 @@ view {
 }
 
 .post-txt{
-  font-size: 12pt;
+  font-size: 11pt;
+  word-wrap: break-word;
 }
 .card {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   background-color: var(--offwhite);
   min-height: 100px;
   width: 90vw;
