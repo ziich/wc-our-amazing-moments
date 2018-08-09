@@ -51,9 +51,8 @@ Page({
     myRequest.post({
       path: 'posts',
       data: {
-        post: {
-          content: e.detail.value.content
-        }, 
+          content: e.detail.value.content,
+          user_id : 3
       },  
     success(res) {
         console.log(res)
