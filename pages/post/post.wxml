@@ -5,7 +5,7 @@
       <view class="post-field">
         <textarea placeholder="Say something amazing!" auto-focus />
       </view>
-      <button class="btn-post" bindtap='post'>Add Picture</button>
+      <button class="btn-post" bindtap='takePhoto'>Add Picture</button>
       <button class="btn-post" formType="submit">Submit Post</button> 
       </form>
 
