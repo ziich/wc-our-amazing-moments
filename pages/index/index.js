@@ -23,9 +23,10 @@ Page({
       url: '/pages/show/show?id=_id',
     })
   },
-  onLoad: function () {
-    let page = this
-    this.setData({ image_url: options.leanCloudImage })
+  
+  onLoad: function (options) {
+    console.log(234234, options)
+    this.setData({ pictures: options.leanCloudImage })
 
   
     myRequest.get({
