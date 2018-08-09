@@ -1,17 +1,16 @@
 <!--pages/show/show.wxml-->
 <view class="container">
-post's user name and avatar
+{{post.post_user.name}}
 <view class="show-header">
-        <view class="show-left">2018-08-08</view>
-        <view class="show-right" bindtap='delete'>delete</view>
-        <view class="show-right" bindtap='edit'>edit</view></view>
+        <view class="show-left">{{post.date}}</view>
+</view>
        
     <view class="show-card">
-      <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now?</p>
+      <p class="post-txt">{{post.content}}</p>
     </view>
 
   <view class="like" bindtap="likePost">
-    <text class="like-txt"> 10 likes </text>
+    <text class="like-txt">{{post.like}} likes </text>
     <image class="heart" src="/lib/assets/heart{{liked ? 'fill' : ''}}.png"></image>
   </view>
 
@@ -21,12 +20,21 @@ post's user name and avatar
     </view>
     <button class="btn-comment" form-type="submit">Submit Comment</button>
   </form>
-  <text class="title">(#)comments</text>
+
+
+  
+  <text class="title">({{post.comments.length}}) comments</text>
+
+
   <view class="container">
+   <view wx:for="{{post.comments}}">
     <view class="comment-card">
+   
     <view class="comment-avatar"></view>
-      <view class="comment-head">username - 2018-08-09 12:00am</view>
-      <view class="comment-body">a sweet comment for a sweet post, bitch! </view>
+    
+      <view class="comment-head">{{item.comment_user.name}} - {{item.date}}</view>
+      <view class="comment-body">{{item.content}} </view>
+    </view>
     </view>
   </view>
 </view>

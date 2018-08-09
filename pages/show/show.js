@@ -1,4 +1,5 @@
 // pages/show/show.js
+const app = getApp()
 wx.navigateBack({
   delta: 1
 })
@@ -9,21 +10,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-    liked: false,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id)
-    let id = options.id
     // change the url
+    let that = this
     wx.request({
-      url: 'http://localhost:3000/post/' + id,
+      url: 'http://localhost:3000/api/v1/posts/' + app.globalData.current_post_id,
+      success: function(res) {
+        console.log(res)
+        that.setData({ post: res.data})
+      }
     })
   },
   
+  bindFormSubmit: function (e) {
+    let page = this
+    console.log(e)
+    wx.showToast({ title: 'Sending...', icon: 'loading', duration: 1000 })
+    // Post new  to API
+    myRequest.post({
+      path: 'posts',
+      data: {
+
+        content: e.detail.value.content,
+        user_id: 3
+      },
+      success(res) {
+        console.log(res)
+      }
+    })
+    setTimeout(function () {
+      wx.reLaunch({
+        url: '/pages/index/index'
+      })
+    }, 1000)
+  },
   // deletePost: function (e) {
   //   let page = this
   //   myRequest.delete({
