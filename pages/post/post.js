@@ -16,6 +16,7 @@ Page({
   },
   data: {},
   formSubmit: function (e) {
+    console.log("hahahaha")
     let page = this
     wx.showToast({ title: 'Sending...', icon: 'loading', duration: 1000 })
     // Post new  to API
@@ -23,7 +24,7 @@ Page({
       path: 'posts',
       data: {
         post: {
-          content: e.detail.value.content
+          content:  e.detail.value.content
         }, 
       },  
     success(res) {
