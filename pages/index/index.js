@@ -14,6 +14,7 @@ Page({
 
 
   data: {
+    items: []
   },
   select: function(e) {
     console.log(e)
@@ -28,22 +29,6 @@ Page({
     console.log(234234, options)
     this.setData({ pictures: options.leanCloudImage })
 
-  onShow: function () {
-    let page = this
-    myRequest.get({
-      path: 'posts',
-      success(res) {
-        page.setData({ posts: res.data.posts })
-      }
-    })
-  },
-// delete this function after posts from DB load properly
-  test: function (e) {
-      wx.navigateTo({
-      url: '/pages/show/show',
-    })
-  },
-  
     myRequest.get({
       path: "posts",
       success: function (res) {
@@ -53,6 +38,26 @@ Page({
       }
     })
   },
+
+  onShow: function () {
+    let page = this
+    myRequest.get({
+      path: 'posts',
+      success(res) {
+        page.setData({ posts: res.data.posts })
+      }
+    })
+  },
+  
+// delete this function after posts from DB load properly
+  test: function (e) {
+      wx.navigateTo({
+      url: '/pages/show/show',
+    })
+  },
+  //----
+
+
 
   // should only be available for the main user
   deletePost: function (e) {
