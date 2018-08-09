@@ -1,3 +1,15 @@
+const AV = require('./utils/av-weapp-min.js')
+const config = require('./key')
+
+
+AV.init({
+  appId: config.appId,
+  appKey: config.appSecret,
+});
+
+
+
+
 App({
   onLaunch: function(){
 //     const host  = 'http://localhost:3000/'
@@ -22,10 +34,6 @@ App({
   },
   
 globalData: {
-  items: [
-    { name: "Salmon", content: "Please, give me happy lemon" },
-    { name: "Allen", content: "Nice bootcamp with lewagon" },
-    { name: "Mo", content: "so sleepy today" }
-  ]
-}
+  items: []
+  }
 })

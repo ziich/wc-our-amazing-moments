@@ -1,6 +1,7 @@
 
 // pages/post/post.js
 const myRequest = require('../../lib/api/request');
+let app = getApp()
 
 Page({
   post: function(e) {
@@ -11,6 +12,10 @@ Page({
       success: function (res) {
         // Returns the local file path list for the selected photo, tempFilePath         can be used as the img tag's src attribute to display the image
         var tempFilePaths = res.tempFilePaths
+        console.log(55, tempFilePaths)
+        app.globalData.pictures = tempFilePaths
+        console.log(66, app.globalData)
+        
       },
     })
   },

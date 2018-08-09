@@ -25,9 +25,7 @@ Page({
   },
   onLoad: function () {
     let page = this
-    // console.log(app)
-    // console.log(66,this.data.places)
-
+  
     myRequest.get({
       path: "posts",
       success: function (res) {

@@ -3,7 +3,9 @@
 post's user name and avatar
 <view class="show-header">
         <view class="show-left">2018-08-08</view>
-        <view class="show-right">edit delete</view></view>
+        <view class="show-right" bindtap='delete'>delete</view>
+        <view class="show-right" bindtap='edit'>edit</view></view>
+       
     <view class="show-card">
       <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now?</p>
     </view>

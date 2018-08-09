@@ -19,7 +19,44 @@ Page({
       url: 'http://localhost:3000/post/' + id,
     })
   },
+  // deletePost: function (e) {
+  //   let page = this
+  //   myRequest.delete({
+  //     path: `posts/${e.currentTarget.dataset.id}`,
 
+  //     success: function (res) {
+  //       console.log('deleted')
+  //     },
+  //     fail: function (res) {
+  //       console.log('Error')
+  //     },
+  //   })
+  //   wx.reLaunch({
+  //     url: '/pages/index/index',
+  //   })
+  // },
+
+  //   let post = {
+  //   }
+  //   content: "Spicy Food",
+  //   updatePost: function (post, _url, id) {
+  //   }
+  //   let that = this
+  //   wx.request({
+  //     })
+  //   url: _url + id,
+  //     data: restaurant,
+  //     method: 'PUT',
+  //     header: { 'content-type': 'application/json' },
+  //     success: function (res) {
+  //     },
+  //   }
+  //   console.log('success' + res)
+  //     fail: function (res) {
+  //       console.log('Error' + res)
+  //     }
+  //   })
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
