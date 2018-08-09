@@ -16,13 +16,13 @@
 
   <form bindsubmit="bindFormSubmit">
     <view class="section">
-      <textarea class="post-field" bindblur="bindTextAreaBlur" auto-height placeholder="leave a comment (140 chars)" />
+      <textarea class="post-field" bindblur="bindTextAreaBlur" name = "content" auto-height placeholder="leave a comment (140 chars)" />
     </view>
     <button class="btn-comment" form-type="submit">Submit Comment</button>
   </form>
 
 
-  
+
   <text class="title">({{post.comments.length}}) comments</text>
 
 

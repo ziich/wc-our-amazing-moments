@@ -1,5 +1,6 @@
 // pages/show/show.js
 const app = getApp()
+const myRequest = require('../../lib/api/request')
 wx.navigateBack({
   delta: 1
 })
@@ -30,13 +31,12 @@ Page({
   
   bindFormSubmit: function (e) {
     let page = this
-    console.log(e)
+    console.log(666,e)
     wx.showToast({ title: 'Sending...', icon: 'loading', duration: 1000 })
     // Post new  to API
     myRequest.post({
-      path: 'posts',
+      path: `posts/${app.globalData.current_post_id}/comments`,
       data: {
-
         content: e.detail.value.content,
         user_id: 3
       },
@@ -88,16 +88,44 @@ Page({
   //       console.log('Error' + res)
   //     }
   //   })
-  
+  // myRequest.post({
+  //     path: `posts/${app.globalData.current_post_id}/comments`,
+  //     data: {
+  //       content: e.detail.value.content,
+  //       user_id: 3
+  //     },
+  //     success(res) {
+  //       console.log(res)
+  //     }
+  //   })
   likePost: function (event) {
     if (!this.data.liked) {
       this.setData({
         liked: true,
       })
-      console.log(this.data.liked)
+      myRequest.post({
+        path: `likes/like`,
+        data: {
+          post_id: app.globalData.current_post_id,
+          user_id: 1
+        },
+        success(res) {
+          console.log(res)
+        }
+      })
     } else {
       this.setData({
         liked: false
+      })
+      myRequest.post({
+        path: `likes/unlike`,
+        data: {
+          post_id: app.globalData.current_post_id,
+          user_id: 1
+        },
+        success(res) {
+          console.log(res)
+        }
       })
     }
   },
