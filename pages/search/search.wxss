@@ -1,1 +1,13 @@
 /* pages/search/search.wxss */
+
+.container {
+  display: flex;
+  flex-basis: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.search-input{
+  background-color: white;
+  padding: 2px;
+}
