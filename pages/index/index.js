@@ -28,6 +28,15 @@ Page({
     console.log(234234, options)
     this.setData({ pictures: options.leanCloudImage })
 
+  myRequest.get({
+    path: "posts",
+    success: function (res) {
+      console.log(555, res)
+      console.log(res)
+      page.setData({ items: res.data.posts })
+      }
+  })
+},
   onShow: function () {
     let page = this
     myRequest.get({
@@ -37,6 +46,7 @@ Page({
       }
     })
   },
+  
 // delete this function after posts from DB load properly
   test: function (e) {
       wx.navigateTo({
@@ -44,17 +54,7 @@ Page({
     })
   },
   
-    myRequest.get({
-      path: "posts",
-      success: function (res) {
-        console.log(555, res)
-        console.log(res)
-        page.setData({ items: res.data.posts })
-      }
-    })
-  },
-
-  // should only be available for the main user
+ // should only be available for the main user
   deletePost: function (e) {
     let page = this
     myRequest.delete({
