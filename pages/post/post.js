@@ -5,6 +5,9 @@ const AV = require('../../utils/av-weapp-min.js');
 
 
 Page({
+  data: {
+    items: []
+  },
   takePhoto: function(e) {
     let that = this
     wx.chooseImage({
@@ -18,6 +21,7 @@ Page({
         app.globalData.pictures = tempFilePaths
         console.log(66, app.globalData)
 
+        
         that.uploadPromise(tempFilePaths).then(res => {
           console.log('You can execute anything here')
           return res
@@ -25,8 +29,11 @@ Page({
           console.log('Or .. execute more')
           return res
         }).then(res => {
+          console.log(444,res)
           let url = `/pages/index/index?leanCloudImage=${res}`
-          wx.navigateTo({ url })
+          app.globalData.pictures = res
+          console.log(111,app.globalData.pictures)
+          wx.reLaunch({ url })
         })
         
       }

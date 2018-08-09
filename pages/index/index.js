@@ -23,6 +23,10 @@ Page({
       url: '/pages/show/show?id=_id',
     })
   },
+ 
+  onLoad: function (options) {
+    console.log(234234, options)
+    this.setData({ pictures: options.leanCloudImage })
 
   onShow: function () {
     let page = this
@@ -39,11 +43,6 @@ Page({
       url: '/pages/show/show',
     })
   },
-
-  onLoad: function (options) {
-    let page = this
-    this.setData({ image_url: options.leanCloudImage })
-
   
     myRequest.get({
       path: "posts",
