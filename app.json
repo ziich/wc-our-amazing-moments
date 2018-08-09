@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/show/show",
-    "pages/post/post"
-    
+    "pages/post/post",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,9 +11,8 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-
   "tabBar": {
-    "backgroundColor": "#999999",
+    "backgroundColor": "#222222",
     "borderStyle": "#999999",
     "selectedColor": "#CBE86B",
     "color": "#CBE86B",
@@ -29,6 +28,12 @@
         "text": "Post",
         "iconPath": "/lib/assets/compose.png",
         "selectedIconPath": "/lib/assets/compose.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "Search",
+        "iconPath": "/lib/assets/search.png",
+        "selectedIconPath": "/lib/assets/search.png"
       }
     ]
   }
