@@ -1,4 +1,8 @@
 // pages/show/show.js
+wx.navigateBack({
+  delta: 1
+})
+
 Page({
 
   /**
@@ -19,6 +23,7 @@ Page({
       url: 'http://localhost:3000/post/' + id,
     })
   },
+  
   // deletePost: function (e) {
   //   let page = this
   //   myRequest.delete({
