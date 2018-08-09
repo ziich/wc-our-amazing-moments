@@ -50,3 +50,43 @@ color: black;
 .container{
   height: 100vh;
 }
+
+.like-txt{
+  color: var(--brightgreen);
+  font-weight: lighter;
+}
+.heart{
+  height: 17px;
+  width: 17px;
+}
+
+.comment-card {
+  background-color: var(--offwhite);
+  min-height: 50;
+  width: 90vw;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+  margin: 5px;
+  padding: 5px 5px 0px 5px;
+  font-size: 10pt;
+}
+
+.comment-avatar {
+  float: left;
+  background-color: var(--brightgreen);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: 1px solid black;
+}
+.comment-head {
+  font-size: 10px;
+  background-color: var(--brightgreen);
+  margin:-5px;
+}
+
+.comment-body {
+  padding: 5px;
+
+}

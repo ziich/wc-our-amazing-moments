@@ -1,13 +1,10 @@
 const AV = require('./utils/av-weapp-min.js')
-const config = require('./key')
-
-
+const config = require('./lib/key.js')
+// Initialization of the app
 AV.init({
-  appId: config.appId,
-  appKey: config.appSecret,
-});
-
-
+    appId: config.appId,
+    appKey: config.appSecret,
+  });
 
 
 App({

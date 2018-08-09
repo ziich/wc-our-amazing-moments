@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    liked: false,
   },
 
   /**
@@ -23,6 +23,7 @@ Page({
   //   let page = this
   //   myRequest.delete({
   //     path: `posts/${e.currentTarget.dataset.id}`,
+
 
   //     success: function (res) {
   //       console.log('deleted')
@@ -57,6 +58,19 @@ Page({
   //     }
   //   })
   
+  likePost: function (event) {
+    if (!this.data.liked) {
+      this.setData({
+        liked: true,
+      })
+      console.log(this.data.liked)
+    } else {
+      this.setData({
+        liked: false
+      })
+    }
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

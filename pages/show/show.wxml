@@ -9,7 +9,12 @@ post's user name and avatar
     <view class="show-card">
       <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now?</p>
     </view>
-like
+
+  <view class="like" bindtap="likePost">
+    <text class="like-txt"> 10 likes </text>
+    <image class="heart" src="/lib/assets/heart{{liked ? 'fill' : ''}}.png"></image>
+  </view>
+
   <form bindsubmit="bindFormSubmit">
     <view class="section">
       <textarea class="post-field" bindblur="bindTextAreaBlur" auto-height placeholder="leave a comment (140 chars)" />
@@ -17,4 +22,11 @@ like
     <button class="btn-comment" form-type="submit">Submit Comment</button>
   </form>
   <text class="title">(#)comments</text>
+  <view class="container">
+    <view class="comment-card">
+    <view class="comment-avatar"></view>
+      <view class="comment-head">username - 2018-08-09 12:00am</view>
+      <view class="comment-body">a sweet comment for a sweet post, bitch! </view>
+    </view>
+  </view>
 </view>
