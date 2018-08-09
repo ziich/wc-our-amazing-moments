@@ -1,5 +1,6 @@
 const app = getApp()
-const myRequest = require('../../lib/api/request');
+const myRequest = require('../../lib/api/request')
+const AV = require('../../utils/av-weapp-min.js');
 
 
 Page({
@@ -13,7 +14,6 @@ Page({
 
 
   data: {
-    items: []
   },
   select: function(e) {
     console.log(e)
@@ -23,11 +23,26 @@ Page({
       url: '/pages/show/show?id=_id',
     })
   },
-  
+ 
   onLoad: function (options) {
     console.log(234234, options)
     this.setData({ pictures: options.leanCloudImage })
 
+  onShow: function () {
+    let page = this
+    myRequest.get({
+      path: 'posts',
+      success(res) {
+        page.setData({ posts: res.data.posts })
+      }
+    })
+  },
+// delete this function after posts from DB load properly
+  test: function (e) {
+      wx.navigateTo({
+      url: '/pages/show/show',
+    })
+  },
   
     myRequest.get({
       path: "posts",
@@ -38,6 +53,7 @@ Page({
       }
     })
   },
+
   // should only be available for the main user
   deletePost: function (e) {
     let page = this
