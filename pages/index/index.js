@@ -1,5 +1,6 @@
 const app = getApp()
-const myRequest = require('../../lib/api/request');
+const myRequest = require('../../lib/api/request')
+const AV = require('../../utils/av-weapp-min.js');
 
 
 Page({
@@ -32,7 +33,7 @@ Page({
   },
 // ---
 
-  onLoad: function () {
+  onLoad: function (options) {
     let page = this
     this.setData({ image_url: options.leanCloudImage })
 
