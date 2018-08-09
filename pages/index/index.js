@@ -25,6 +25,8 @@ Page({
   },
   onLoad: function () {
     let page = this
+    this.setData({ image_url: options.leanCloudImage })
+
   
     myRequest.get({
       path: "posts",
