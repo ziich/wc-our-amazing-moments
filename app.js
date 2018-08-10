@@ -29,7 +29,7 @@ App({
     // })
   },
   
-// globalData: {
-//   items: []
-//   }
+globalData: {
+  items: []
+  }
 })
