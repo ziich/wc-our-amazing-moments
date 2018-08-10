@@ -1,4 +1,6 @@
 // pages/show/show.js
+const app = getApp()
+const myRequest = require('../../lib/api/request')
 wx.navigateBack({
   delta: 1
 })
@@ -9,21 +11,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-    liked: false,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id)
-    let id = options.id
     // change the url
+    let that = this
     wx.request({
-      url: 'http://localhost:3000/post/' + id,
+      url: 'http://localhost:3000/api/v1/posts/' + app.globalData.current_post_id,
+      success: function(res) {
+        console.log(res)
+        that.setData({ post: res.data})
+      }
     })
   },
   
+  bindFormSubmit: function (e) {
+    let page = this
+    console.log(666,e)
+    wx.showToast({ title: 'Sending...', icon: 'loading', duration: 1000 })
+    // Post new  to API
+    myRequest.post({
+      path: `posts/${app.globalData.current_post_id}/comments`,
+      data: {
+        content: e.detail.value.content,
+        user_id: 3
+      },
+      success(res) {
+        console.log(res)
+      }
+    })
+    setTimeout(function () {
+      wx.reLaunch({
+        url: '/pages/index/index'
+      })
+    }, 1000)
+  },
   // deletePost: function (e) {
   //   let page = this
   //   myRequest.delete({
@@ -62,16 +88,44 @@ Page({
   //       console.log('Error' + res)
   //     }
   //   })
-  
+  // myRequest.post({
+  //     path: `posts/${app.globalData.current_post_id}/comments`,
+  //     data: {
+  //       content: e.detail.value.content,
+  //       user_id: 3
+  //     },
+  //     success(res) {
+  //       console.log(res)
+  //     }
+  //   })
   likePost: function (event) {
     if (!this.data.liked) {
       this.setData({
         liked: true,
       })
-      console.log(this.data.liked)
+      myRequest.post({
+        path: `likes/like`,
+        data: {
+          post_id: app.globalData.current_post_id,
+          user_id: 1
+        },
+        success(res) {
+          console.log(res)
+        }
+      })
     } else {
       this.setData({
         liked: false
+      })
+      myRequest.post({
+        path: `likes/unlike`,
+        data: {
+          post_id: app.globalData.current_post_id,
+          user_id: 1
+        },
+        success(res) {
+          console.log(res)
+        }
       })
     }
   },
