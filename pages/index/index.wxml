@@ -1,38 +1,26 @@
 <!--index.wxml-->
   <view class="container">
-  <view  class="title">amazing moments </view>
+  <view  class="title">amazing moments</view>
   <!-- ADD DIFFERENT ATTRIBUTES ONCE OUR MODELS ARE DEFINED -->
 
-    <block wx:key="{{posts}}"> 
-      <view class="card">
-      <view class="post-txt">{{item.content}}</view>
-      <view class = "post-user">{{item.post_user.name}}</view>
-        <view class="card-footer">
-        <view class="footer-left">{{item.date}}</view>
-        <view class = "footer-right">like: {{item.like}}</view>
-        <view class="footer-right" bindtap = "test" data-id = "{{item.id}}">comment({{item.comments.length}}) </view>
-        
-        </view>
-    </view>
-    </block>  
-
+  <block wx:for="{{posts}}"> 
     <view class="card">
-      <view class="bg-card" style="background-image: url({{pictures}});"></view>
-      <!-- linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(1000,136,161,0.3) 50%), -->
+      <view class="bg-card" style="background-image: url({{item.image_url}});"></view>
       <view class="card-header">
-        <view class="avatar-box"><image src=''></image></view>
+        <view class="avatar-box"><image class="avatar" src="{{item.post_user.avatar}}"></image></view>
         <view class="post-info">
           <view class = "post-user">username: {{item.post_user.name}}</view>
-          <view class="post-date">posted date: {{item.date}}</view>
+          <view class="post-date">posted: {{item.date}}</view>
         </view>
       </view>
-      <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now? will this box get bigger if there's more and more and more and more and more text content?</p>
+      <p class="post-txt">{{item.content}}</p>
 
         <view class="card-footer">
-        <view class="footer-left"></view>
-        <view class="footer-right">comment(0) like</view>
+        <view class = "footer-right">like: {{item.like}}</view>
+        <view class="footer-right" bindtap = "test" data-id = "{{item.id}}">comment({{item.comments.length}})</view>
       </view>
     </view>
+   </block> 
 
     <!-- DELETE CARDS BELOW ONCE OUR SERVER IS RUNNING -->
     

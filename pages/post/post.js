@@ -11,11 +11,11 @@ Page({
   takePhoto: function(e) {
     let that = this
     wx.chooseImage({
-      count: 1, // Default 9
-      sizeType: ['original', 'compressed'], // Can specify whether it is the                                                                  original or compressed image, both have defaults
-      sourceType: ['album', 'camera'], // Can specify whether the source is an                                                           album or camera, both have defaults
+      count: 1,
+      sizeType: ['compressed'],
+      sourceType: ['album', 'camera'], // Can specify whether the source is an album or camera, both have defaults
       success: function (res) {
-        // Returns the local file path list for the selected photo, tempFilePath         can            be used as the img tag's src attribute to display the image
+        // Returns the local file path list for the selected photo, tempFilePath can be used as the img tag's src attribute to display the image
         let tempFilePaths = res.tempFilePaths[0]
         console.log(55, tempFilePaths)
         app.globalData.pictures = tempFilePaths
@@ -51,6 +51,7 @@ Page({
     })
   },
   data: {},
+
   formSubmit: function (e) {
     let page = this
     wx.showToast({ title: 'Sending...', icon: 'loading', duration: 1000 })
@@ -58,9 +59,9 @@ Page({
     myRequest.post({
       path: 'posts',
       data: {
-        
           content: e.detail.value.content,
-          user_id : 3
+          user_id: 3
+          //image_url: app.globalData.pictures
       },  
     success(res) {
         console.log(res)
