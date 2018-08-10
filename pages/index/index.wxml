@@ -17,7 +17,11 @@
 
     <!-- DELETE CARDS BELOW ONCE OUR SERVER IS RUNNING -->
 
+
     <!-- <view class="card">
+
+    <view style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.3) 50%),url({{pictures}});" class="card">
+
       <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now? will this box get bigger if there's more and more and more and more and more text content?</p>
 
         <view class="card-footer">
