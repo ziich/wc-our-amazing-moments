@@ -3,7 +3,7 @@
   <view  class="title">amazing moments </view>
   <!-- ADD DIFFERENT ATTRIBUTES ONCE OUR MODELS ARE DEFINED -->
 
-    <block wx:for="{{posts}}"> 
+    <block wx:key="{{posts}}"> 
       <view class="card">
       <view class="post-txt">{{item.content}}</view>
       <view class = "post-user">{{item.post_user.name}}</view>
