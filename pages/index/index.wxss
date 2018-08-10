@@ -6,15 +6,6 @@
   align-items: center;
 }
 
-.avatar-box {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-color: var(--brightgreen)
-}
-
-
 .userinfo-nickname {
   color: #aaa;
 }

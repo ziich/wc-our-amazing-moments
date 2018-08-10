@@ -54,6 +54,34 @@ view {
   background:linear-gradient(transparent 100px,white);
 }
 
+.card-header{
+  display: inline-flex;
+  flex-direction: row;
+  z-index: 1;
+}
+
+.avatar-box {
+  width: 90rpx;
+  height: 90rpx;
+  margin: 5rpx;
+  border-radius: 50%;
+  background-color: var(--brightgreen);
+  z-index: 1;
+}
+
+.post-info{
+  display: flex;
+  flex-direction: column;
+}
+.post-user{
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.post-date{
+    font-size: 9pt;
+    float: bottom;
+}
 .card-footer{
   background-color: var(--brightgreen);
   position: absolute;
