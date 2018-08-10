@@ -11,11 +11,9 @@ Page({
       userInfo: e.detail.userInfo
     })
   },
+  
 
-
-  data: {
-    items: []
-  },
+  data: {},
   // select: function(e) {
   //   console.log(e)
   //   let _id = e.currentTarget.dataset.data.id
