@@ -12,12 +12,28 @@ view {
 .post-txt{
   font-size: 11pt;
   word-wrap: break-word;
+  text-shadow: 0px 0px 10px var(--offwhite);
+  z-index: 1;
 }
+
+.bg-card {
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  background-position: center;
+  background-size: 100vw;
+
+}
+
 .card {
   display: flex;
   flex-direction: column;
   background-color: var(--offwhite);
-  min-height: 100px;
+  min-height: 200px;
   width: 90vw;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.7);
   position: relative;
@@ -35,7 +51,7 @@ view {
   position:absolute;
   left:0;
   top:0;
-  background:linear-gradient(transparent 45px,white);
+  background:linear-gradient(transparent 100px,white);
 }
 
 .card-footer{

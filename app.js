@@ -6,7 +6,6 @@ AV.init({
     appKey: config.appSecret,
   });
 
-
 App({
   onLaunch: function(){
     const host  = 'http://localhost:3000/'
