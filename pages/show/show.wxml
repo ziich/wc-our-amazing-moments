@@ -1,8 +1,9 @@
 <!--pages/show/show.wxml-->
 <view class="container">
-{{post.post_user.name}}
+
 <view class="show-header">
-        <view class="show-left">{{post.date}}</view>
+  <view class="show-left">{{post.post_user.name}}</view>
+  <view class="show-right">{{post.date}}</view>
 </view>
        
     <view class="show-card">
@@ -23,7 +24,7 @@
 
 
 
-  <text class="title">({{post.comments.length}}) comments</text>
+  <text class="title">{{post.comments.length}} comments</text>
 
 
   <view class="container">

@@ -16,7 +16,7 @@
       <p class="post-txt">{{item.content}}</p>
         <view class="card-footer">
         <view class = "footer-right">like: {{item.like}}</view>
-        <view class="footer-right" bindtap = "test" data-id = "{{item.id}}">comment({{item.comments.length}})       </view>
+        <view class="footer-right" bindtap = "test" data-id = "{{item.id}}">comments({{item.comments.length}})       </view>
       </view>
     </view>
    </block> 
