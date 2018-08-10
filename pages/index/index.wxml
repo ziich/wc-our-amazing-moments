@@ -5,7 +5,8 @@
 
     <block wx:for="{{posts}}"> 
       <view class="card">
-      <p class="post-txt">{{item.content}}</p>
+      <view class="post-txt">{{item.content}}</view>
+      <view class = "post-user">{{item.post_user.name}}</view>
         <view class="card-footer">
         <view class="footer-left">{{item.date}}</view>
         <view class = "footer-right">like: {{item.like}}</view>
