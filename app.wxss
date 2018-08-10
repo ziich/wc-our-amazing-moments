@@ -9,7 +9,7 @@ view {
   --footer-txt: black;
 }
 
-.post-txt{
+.post-txt {
   font-size: 11pt;
   word-wrap: break-word;
   text-shadow: 0px 0px 10px var(--offwhite);
@@ -17,7 +17,7 @@ view {
 }
 
 .bg-card {
-  opacity: 0.7;
+  opacity: 0.6;
   top: 0;
   left: 0;
   bottom: 0;
@@ -72,7 +72,6 @@ view {
 .avatar {
   width: 90rpx;
   height: 90rpx;
-
 }
 
 .post-info{
