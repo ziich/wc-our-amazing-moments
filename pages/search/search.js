@@ -1,4 +1,7 @@
 // pages/search/search.js
+const app = getApp()
+const myRequest = require('../../lib/api/request')
+
 Page({
 
   /**

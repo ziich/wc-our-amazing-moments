@@ -1,5 +1,6 @@
 <!--index.wxml-->
   <view class="container">
+  <view class="avatar-box"><image src=''></image></view>
   <view  class="title">your amazing moments </view>
   <!-- ADD DIFFERENT ATTRIBUTES ONCE OUR MODELS ARE DEFINED -->
 
@@ -15,7 +16,9 @@
 
     <!-- DELETE CARDS BELOW ONCE OUR SERVER IS RUNNING -->
 
-    <view style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.3) 50%),url({{pictures}});" class="card">
+    <view class="card">
+      <view class="bg-card" style="background-image: url({{pictures}});"></view>
+      <!-- linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(1000,136,161,0.3) 50%), -->
       <p class="post-txt">text-content goes in this card. sometimes there might be multiple lines of text like this. can you see me? how about now? will this box get bigger if there's more and more and more and more and more text content?</p>
 
         <view class="card-footer">
@@ -69,6 +72,7 @@
      <text class="user-motto">{{motto}}</text>
     </view> -->
 
+<!-- delete below after post links work -->
 <view bindtap='test'>go to show</view>
 
   </view>
