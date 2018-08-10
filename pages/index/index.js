@@ -4,13 +4,13 @@ const AV = require('../../utils/av-weapp-min.js');
 
 
 Page({
-  // getUserInfo: function(e) {
-  //   console.log(e)
-  //   app.globalData.userInfo = e.detail.userInfo
-  //   this.setData({
-  //     userInfo: e.detail.userInfo
-  //   })
-  // },
+  getUserInfo: function(e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
+  },
 
 
   data: {
