@@ -72,7 +72,9 @@ view {
 .avatar {
   width: 90rpx;
   height: 90rpx;
+
 }
+
 .post-info{
   display: flex;
   flex-direction: column;

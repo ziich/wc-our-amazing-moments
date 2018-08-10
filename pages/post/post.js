@@ -13,14 +13,12 @@ Page({
     wx.chooseImage({
       count: 1,
       sizeType: ['compressed'],
-      sourceType: ['album', 'camera'], // Can specify whether the source is an album or camera, both have defaults
+      sourceType: ['album', 'camera'],
       success: function (res) {
-        // Returns the local file path list for the selected photo, tempFilePath can be used as the img tag's src attribute to display the image
         let tempFilePaths = res.tempFilePaths[0]
         console.log(55, tempFilePaths)
         app.globalData.pictures = tempFilePaths
         console.log(66, app.globalData)
-
         
         that.uploadPromise(tempFilePaths).then(res => {
           console.log('You can execute anything here')
@@ -33,7 +31,6 @@ Page({
           let url = `/pages/index/index?leanCloudImage=${res}`
           app.globalData.pictures = res
           console.log(111,app.globalData.pictures)
-          wx.reLaunch({ url })
         })
         
       }
@@ -60,8 +57,8 @@ Page({
       path: 'posts',
       data: {
           content: e.detail.value.content,
-          user_id: 3
-          //image_url: app.globalData.pictures
+          user_id: 3,
+          image_url: app.globalData.pictures
       },  
     success(res) {
         console.log(res)
