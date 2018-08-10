@@ -4,13 +4,13 @@ const AV = require('../../utils/av-weapp-min.js');
 
 
 Page({
-  // getUserInfo: function(e) {
-  //   console.log(e)
-  //   app.globalData.userInfo = e.detail.userInfo
-  //   this.setData({
-  //     userInfo: e.detail.userInfo
-  //   })
-  // },
+  getUserInfo: function(e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
+  },
 
 
   data: {
@@ -34,7 +34,7 @@ Page({
 
   onLoad: function (options) {
     let page = this
-    this.setData({ image_url: options.leanCloudImage })
+    this.setData({ pictures: options.leanCloudImage })
     myRequest.get({
       
       path: "posts",
