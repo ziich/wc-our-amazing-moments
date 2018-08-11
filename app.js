@@ -24,7 +24,7 @@ App({
             code: res.code,
           },
           success: res => {
-            console.log(111, res)
+            // console.log(111, res)
             this.globalData.userId = res.data.userId
           }
         })
